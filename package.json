@@ -8,5 +8,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "dotenv": "^17.2.3"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.57.0"
+  }
 }

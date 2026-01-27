@@ -5,8 +5,10 @@ import HomePage from '../pages/HomePage';
 test('valid login test', async ({page})=>{
     const loginPage = new LoginPage(page);
     await loginPage.navigateToLoginPage();
-    await loginPage.fillUsername('student');
-    await loginPage.fillPassword('Password123');
+    console.log("Username:", process.env.USERNAMEE);
+    console.log("Password:", process.env.PASSWORD);
+    await loginPage.fillUsername(process.env.USERNAMEE!);
+    await loginPage.fillPassword(process.env.PASSWORD!);
     const homePage = await loginPage.clickLoginButton();
     await homePage.expectServiceTitle();
 })
